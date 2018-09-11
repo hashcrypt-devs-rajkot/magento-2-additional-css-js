@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Hashcrypt Technologies
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Hashcrypt.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.hashcrypt.com/license.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Hashcrypt
+ * @package     Hashcrypt_Smtp
+ * @copyright   Copyright (c) 2018 Hashcrypt Technologies (http://www.hashcrypt.com/)
+ * @license     https://www.hashcrypt.com/license.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="hash_tab" translate="label" sortOrder="10">
+            <label>Hashcrypt Technologies</label>
+        </tab>
+        <section id="css_js" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Additional Css-Js</label>
+            <tab>hash_tab</tab>
+            <resource>Hashcrypt_Devs::config_manufacturer</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Additional Css-Js</label>
+                <field id="additional_css" translate="label comment" type="textarea" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Additional Css</label>
+                    <comment><![CDATA[Type in your custom styles , e.g.:<br/>
+                            <em>.page { padding: 0; margin: 0; }<br/>
+                            .main { font-size: 14px; font-weight:400; }
+                            </em>
+                            ]]></comment>
+                </field>
+                 <field id="additional_js" translate="label comment" type="textarea" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Additional Js</label>
+                    <comment><![CDATA[Type in your custom scripts , e.g.:<br/>
+                            document.getElementById('id')<br/>
+                            $('demo').click(function(){
+                            ]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

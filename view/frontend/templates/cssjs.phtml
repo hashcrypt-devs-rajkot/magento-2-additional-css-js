@@ -1,0 +1,47 @@
+<?php
+/**
+ * Hashcrypt Technologies
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Hashcrypt.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.hashcrypt.com/license.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Hashcrypt
+ * @package     Hashcrypt_Smtp
+ * @copyright   Copyright (c) 2018 Hashcrypt Technologies (http://www.hashcrypt.com/)
+ * @license     https://www.hashcrypt.com/license.txt
+ */
+$helper = $this->helper(\Hashcrypt\CssJs\Helper\Data::class);
+$css = $helper->getGeneralConfig("additional_css");
+$js = $helper->getGeneralConfig("additional_js");
+?>
+<style>
+<?php
+if(isset($css) && $css){
+  echo $css;
+}
+?>
+</style>
+<script>
+require([
+    "jquery"
+], function($){
+  <?php
+    if(isset($js) && $js){
+      echo $js;
+    }
+  ?>
+});
+</script>
+
+
+
+               
+
